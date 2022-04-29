@@ -1,0 +1,14 @@
+@use "variables" as var;
+
+@mixin breakpoint($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin font-modifier($font-family, $font-size, $font-style, $font-weight) {
+  font-size: $font-size;
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: $font-weight;
+}

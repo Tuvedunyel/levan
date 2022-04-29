@@ -1,0 +1,35 @@
+@use "base";
+@use "abstracts" as var;
+@use "layout";
+@use "components";
+@use "pages";
+
+h4,
+.h4 {
+  @include var.font-modifier(var.$font-roboto, var.$font-size-h4, normal, 600);
+}
+
+h1,
+.h1 {
+  @include var.font-modifier(var.$font-roboto, var.$font-size-h1, normal, 600);
+  color: var.$primary-color;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  @include var.font-modifier(var.$font-roboto, var.$font-size-h2, normal, 600);
+  color: black;
+}
+
+h3,
+.h3 {
+  @include var.font-modifier(var.$font-roboto, var.$font-size-h3, normal, 500);
+  color: var.$primary-color;
+}
+
+.hero-banner-content {
+  h1, strong, a, li, p, #page-navigation a {
+    color: white;
+  }
+}

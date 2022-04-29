@@ -1,12 +1,14 @@
 {
   "name": "levan-theme",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Theme de l'entreprise Levan",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch sass:css --style compressed"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.51.0"
+  }
 }
