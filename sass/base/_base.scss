@@ -167,6 +167,6 @@ ul {
 /* Set font-family, base font-size and line-height */
 
 body {
-  @include var.font-modifier(var.$font-roboto, var.$font-size-base, normal, 400);
+  @include var.font-modifier(var.$font-base, var.$font-size-base, normal, 300);
   line-height: 1.5;
 }
