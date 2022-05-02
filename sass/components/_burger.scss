@@ -1,0 +1,66 @@
+@use '../abstracts' as var;
+
+@include var.breakpoint(1056px) {
+    nav {
+        grid-column: 3;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var.$red_500;
+        height: 100px;
+        width: 100px;
+        align-self: center;
+        justify-self: flex-end;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-main-menu {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        z-index: 99;
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+        flex-direction: column;
+        width: 38px;
+        height: 38px;
+
+        &__burger {
+            display: flex;
+            width: 38px;
+            height: 6px;
+            border-radius: 5px;
+            background: var.$white_700;
+
+        }
+        &::before, &::after {
+            content: "";
+            display: block;
+            width: 38px;
+            height: 6px;
+            border-radius: 5px;
+            background: var.$white_700;
+        }
+
+        &::before {
+            margin-bottom: 0.3em;
+        }
+
+        &::after {
+            margin-top: 0.3em;
+        }
+    }
+}

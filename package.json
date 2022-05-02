@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "Theme de l'entreprise Levan",
   "scripts": {
-    "sass": "sass --watch sass:css --style compressed"
+    "sass": "sass --watch sass:css --style compressed",
+    "typescript": "npx tsc --watch"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.51.0"
+    "sass": "^1.51.0",
+    "typescript": "^4.6.4"
   }
 }

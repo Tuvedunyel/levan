@@ -24,7 +24,7 @@
                 'container' => 'false',
                 'menu_classs' => 'main-menu',
                 'fallback_cb' => false,
-                'items_wrap' => '<div class="menu-btn">
+                'items_wrap' => '<div class="menu-btn" id="menu-btn">
                 <div class="menu-btn__burger"></div>
                 </div><ul id="menu-main-menu" id="%1$s" class="%2$s">%3$s</ul>',
             ) ); ?>

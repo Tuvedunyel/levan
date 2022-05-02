@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "js",
+    "target": "ESNext",
+    "strict": true,
+    "noEmitOnError": true
+  },
+  "files": ["typescript/main.ts"]
+}

@@ -1,6 +1,7 @@
 @use "base";
 @use "abstracts" as var;
 @use "layouts";
+@use 'components';
 
 h1,
 .h1 {
