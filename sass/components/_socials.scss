@@ -1,0 +1,29 @@
+@use "../abstracts" as var;
+
+.socials-header {
+  position: fixed;
+  right: 0.8%;
+  top: 45%;
+
+  a {
+    display: flow-root;
+  }
+
+  a:not(:last-of-type) {
+    margin-bottom: 0.3em;
+  }
+
+  .socials-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-header {
+    position: absolute;
+    width: 85px;
+    height: 58px;
+    right: -31%;
+  }
+}

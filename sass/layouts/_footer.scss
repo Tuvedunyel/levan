@@ -1,0 +1,71 @@
+@use "../abstracts" as var;
+
+footer {
+  background: var.$black-500;
+  color: var.$white-700;
+  font-size: 1.6rem;
+  font-weight: 300;
+  padding-block: 2.2em;
+  padding-bottom: 1.2em;
+
+  @include var.breakpoint(1056px) {
+    nav#footer {
+      background: none;
+      border-radius: none;
+      transition: none;
+      position: initial;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.container {
+  max-width: 80%;
+  margin-inline: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+
+  @include var.breakpoint(1133px) {
+    max-width: 85%;
+  }
+
+  @include var.breakpoint(1066px) {
+    max-width: 90%;
+  }
+
+  @include var.breakpoint(1056px) {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    ul,
+    p,
+    a,
+    li {
+      text-align: center;
+    }
+  }
+}

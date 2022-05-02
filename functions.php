@@ -28,6 +28,7 @@ add_action('wp_enqueue_scripts', 'btg_register_assets');
   // Menu
   register_nav_menus( array(
     'main' => 'Menu principal',
+    'footer' => 'Menu du footer'
   ));
 
   // add_filter('wpcf7_autop_or_not', '__return_false');

@@ -1,66 +1,131 @@
-@use '../abstracts' as var;
+@use "../abstracts" as var;
 
 @include var.breakpoint(1056px) {
-    nav {
-        grid-column: 3;
-        grid-row: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: var.$red_500;
-        height: 100px;
-        width: 100px;
-        align-self: center;
-        justify-self: flex-end;
-        border-top-left-radius: 50%;
-        border-bottom-left-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  nav {
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var.$red_500;
+    height: 100px;
+    width: 100px;
+    align-self: center;
+    justify-self: flex-end;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .background {
+      display: flex;
+      z-index: 0;
+      position: absolute;
+      inset: 0;
+      opacity: 1;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      background: var.$red_500;
+      width: 100px;
+      height: 100px;
+      transition: width 0.5s ease-in-out;
+    }
+  }
+
+  #menu-main-menu {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    z-index: 99;
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 100;
+    width: 38px;
+    height: 38px;
+
+    &__burger {
+      display: flex;
+      width: 38px;
+      height: 6px;
+      border-radius: 5px;
+      background: var.$white_700;
+      transition: all 1s ease-in-out;
+    }
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 38px;
+      height: 6px;
+      border-radius: 5px;
+      background: var.$white_700;
+      transition: all 1s ease-in-out
+    }
+
+    &::before {
+      margin-bottom: 0.3em;
+    }
+
+    &::after {
+      margin-top: 0.3em;
+    }
+  }
+}
+
+#header-menu {
+  transition: 0.5s ease-in-out;
+
+  &.active {
+    position: initial;
+    .background {
+      inset: 0;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
     }
 
     #menu-main-menu {
-        position: absolute;
-        inset: 0;
-        margin: auto;
+      display: flex;
+
+      a {
         color: white;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2em;
-        z-index: 99;
-        display: none;
+
+        &::hover {
+          color: white;
+
+          &::before,
+          &::after {
+            color: white;
+          }
+        }
+      }
     }
 
     .menu-btn {
-        display: flex;
-        flex-direction: column;
-        width: 38px;
-        height: 38px;
-
         &__burger {
-            display: flex;
-            width: 38px;
-            height: 6px;
-            border-radius: 5px;
-            background: var.$white_700;
-
-        }
-        &::before, &::after {
-            content: "";
-            display: block;
-            width: 38px;
-            height: 6px;
-            border-radius: 5px;
-            background: var.$white_700;
+            transform: translateX(-28px);
         }
 
         &::before {
-            margin-bottom: 0.3em;
+            transform: rotate(405deg);
         }
-
         &::after {
-            margin-top: 0.3em;
+            transform: rotate(-405deg);
         }
     }
+  }
 }
+

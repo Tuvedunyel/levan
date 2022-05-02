@@ -16,6 +16,18 @@ header {
             grid-column: 1;
         }
     }
+
+    @include var.breakpoint(742px) {
+        grid-template-columns: 0.25fr 0.5fr 0.25fr;
+    }
+
+    @include var.breakpoint(459px) {
+        margin-left: 0.5em;
+    } 
+
+    .background {
+        display: none;
+    }
 }
 
 #menu-main-menu {
@@ -97,5 +109,15 @@ header {
     @include var.breakpoint(1056px) {
         grid-column: 2;
         border-radius: 50px;
+    }
+
+    @include var.breakpoint(710px) {
+        &::before {
+            display: none;
+        }
+    }
+
+    @include var.breakpoint(409px) {
+        padding-inline: 0.5em;
     }
 }
