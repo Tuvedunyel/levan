@@ -1,3 +1,13 @@
+:root {
+    --black-700: #000000;
+    --black-500: #171c20;
+    --black-300: #0000006a;
+    
+    --red-500: #be043b;
+
+    --white-700: #ffffff;
+}
+
 $font-base: "Nunito", sans-serif;
 $font-size-base: 2rem;
 $font-size-small: 1.6rem;
@@ -6,8 +16,11 @@ $font-size-h1: 3rem;
 $font-size-h2: 2.1rem;
 $font-size-h3: 2.6rem;
 
-$primary-color: #006792; // black
-$secondary-color: #F1F2ED; // blue
-$tertiary-color: #F6F7F4; // green
-$quaternary-color: #707070; // gray
-$activeMenu-color: #006792; // darkblue
+$black_700: var(--black-700); 
+$black_500: var(--black-500);
+$black_300: var(--black-300);
+
+$red_500: var(--red-500);
+
+$white_700: var(--white-700);
+

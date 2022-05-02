@@ -18,7 +18,17 @@
             $image_alt = $image['alt'];
         ?>
         <img src="<?= esc_url($image_url); ?>" alt="<?= esc_attr($image_alt); ?>" class="logo">
-        <nav id="header-menu"></nav>
+        <nav id="header-menu">
+            <?php wp_nav_menu( array(
+                'theme_location' => 'main',
+                'container' => 'false',
+                'menu_classs' => 'main-menu',
+                'fallback_cb' => false,
+                'items_wrap' => '<div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+                </div><ul id="menu-main-menu" id="%1$s" class="%2$s">%3$s</ul>',
+            ) ); ?>
+        </nav>
         <strong class="phone">
             <?php the_field('numero_de_telephone', 'options') ?>
         </strong>

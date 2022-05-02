@@ -1,23 +1,24 @@
 @use "base";
 @use "abstracts" as var;
+@use "layouts";
 
 h1,
 .h1 {
   @include var.font-modifier(var.$font-base, var.$font-size-h1, normal, 600);
-  color: var.$primary-color;
+  color: var.$black_700;
   text-transform: uppercase;
   text-align: center;
 }
 
 h2 {
   @include var.font-modifier(var.$font-base, var.$font-size-h2, normal, 600);
-  color: black;
+  color: var.$black_700;
 }
 
 h3,
 .h3 {
   @include var.font-modifier(var.$font-base, var.$font-size-h3, normal, 500);
-  color: var.$primary-color;
+  color: var.$black_700;
 }
 
 .hero-banner-content {

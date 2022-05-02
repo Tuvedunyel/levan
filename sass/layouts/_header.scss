@@ -1,0 +1,67 @@
+@use '../abstracts' as var;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 3em;
+    margin-top: 0.6em;
+}
+
+#menu-main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+
+    a {
+        color: var.$black_700;
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 2.1rem;
+
+        &::before {
+            content: "/";
+            color: var.$red_500;
+            font-weight: 700;
+            font-size: 2.1rem;
+            margin-right: 0.5em;
+            opacity: 0;
+        }
+
+        &::after {
+            content: "/";
+            color: var.$red_500;
+            font-weight: 700;
+            font-size: 2.1rem;
+            margin-left: 0.5em;
+            opacity: 0;
+        }
+
+        &:hover {
+            font-weight: 700;
+            color: var.$red_500;
+
+            &::before, &::after {
+                opacity: 1;
+            }
+
+        }
+    }
+}
+
+.phone {
+    background: var.$red_500;
+    font-size: 2rem;
+    font-weight: 400;
+    padding-block: 0.7em;
+    padding-inline: 1em;
+    color: var.$white_700;
+
+    &::before {
+        content: "";
+        background: url('../images/phone.svg') no-repeat center;
+        width: 24px;
+        height: 24px;
+    }
+}
