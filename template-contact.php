@@ -11,7 +11,7 @@
    $haut_page_image_url = $haut_page_image['url'];
    $haut_page_image_alt = $haut_page_image['alt'];
   ?>
-  <img />
+  <img src='<?= esc_html($haut_page_image_url);?>' alt='<?= esc_attr($haut_page_image_alt) ?>' />
  </section>
 
 </main>
