@@ -4,12 +4,10 @@
   position: fixed;
   right: 0.8%;
   top: 45%;
+  z-index: 100;
 
   a {
     display: flow-root;
-  }
-
-  a:not(:last-of-type) {
     margin-bottom: 0.3em;
   }
 

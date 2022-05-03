@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Theme de l'entreprise Levan",
   "scripts": {
-    "sass": "sass --watch sass:css --style compressed",
+    "sass": "sass --no-source-map --watch sass:css --style compressed",
     "typescript": "npx tsc --watch"
   },
   "keywords": [],

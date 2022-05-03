@@ -1,0 +1,86 @@
+@use "../abstracts" as var;
+
+.hero-banner {
+  position: relative;
+  max-width: 1920px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  height: 460px;
+
+  .hero-background {
+    max-height: 424px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+h1 {
+  grid-row: 1;
+  grid-column: 1;
+  font-size: var.$font-size-h1;
+  background: var.$black_700;
+  color: var.$white_700;
+  padding: 0.65em 0.7em;
+  font-weight: 900;
+  text-transform: uppercase;
+  width: fit-content;
+  width: -moz-fit-content;
+  text-align: center;
+  &::before,
+  &::after {
+    content: "/";
+    font-size: var.$font-size-h1;
+    font-weight: 900;
+    margin-right: 0.5em;
+  }
+  &::after {
+    margin-right: 0;
+    margin-left: 0.5em;
+  }
+
+}
+
+.vine-glasses__container {
+  position: absolute;
+  bottom: -13%;
+  right: 30%;
+}
+
+#contact-page {
+
+    article {
+        margin-top: 4.7rem;
+        margin-top: 2.5em;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: var.$font-size-h1;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        font-size: var.$font-size-base;
+        max-width: 632px;
+        font-weight: 400;
+    }
+}

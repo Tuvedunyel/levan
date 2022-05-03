@@ -1,29 +1,6 @@
 @use "base";
 @use "abstracts" as var;
 @use "layouts";
+@use 'pages';
 @use 'components';
 
-h1,
-.h1 {
-  @include var.font-modifier(var.$font-base, var.$font-size-h1, normal, 600);
-  color: var.$black_700;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-h2 {
-  @include var.font-modifier(var.$font-base, var.$font-size-h2, normal, 600);
-  color: var.$black_700;
-}
-
-h3,
-.h3 {
-  @include var.font-modifier(var.$font-base, var.$font-size-h3, normal, 500);
-  color: var.$black_700;
-}
-
-.hero-banner-content {
-  h1, strong, a, li, p, #page-navigation a {
-    color: white;
-  }
-}
