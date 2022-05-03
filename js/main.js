@@ -6,14 +6,16 @@ const labels = document.querySelectorAll(".label");
 if (windowWidth <= 1056) {
     const menuBtn = document.getElementById("menu-btn");
     const headerMenu = document.getElementById("header-menu");
+    const mainTitle = document.querySelector("h1");
     menuBtn?.addEventListener("click", () => {
         headerMenu?.classList.toggle("active");
+        mainTitle?.classList.toggle("remove");
     });
 }
-message?.addEventListener('focus', () => {
+message?.addEventListener("focus", () => {
     transformLabel("message", true);
 });
-message?.addEventListener('blur', e => {
+message?.addEventListener("blur", e => {
     const target = e.target;
     if (target.value.length === 0) {
         transformLabel("message", false);

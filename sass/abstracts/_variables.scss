@@ -1,11 +1,11 @@
 :root {
-    --black-700: #000000;
-    --black-500: #171c20;
-    --black-300: #0000006a;
-    
-    --red-500: #be043b;
+  --black-700: #000000;
+  --black-500: #171c20;
+  --black-300: #0000006a;
 
-    --white-700: #ffffff;
+  --red-500: #be043b;
+
+  --white-700: #ffffff;
 }
 
 $font-base: "Nunito", sans-serif;
@@ -15,11 +15,10 @@ $font-size-h1: 3.1rem;
 $font-size-h2: 2.1rem;
 $font-size-h3: 2.6rem;
 
-$black_700: var(--black-700); 
+$black_700: var(--black-700);
 $black_500: var(--black-500);
 $black_300: var(--black-300);
 
 $red_500: var(--red-500);
 
 $white_700: var(--white-700);
-

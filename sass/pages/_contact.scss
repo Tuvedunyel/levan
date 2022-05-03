@@ -18,6 +18,9 @@
     width: 100%;
     height: 100%;
     z-index: -1;
+    box-shadow: 5px 10px 28px -4px rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: 5px 10px 28px -4px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 5px 10px 28px -4px rgba(0, 0, 0, 0.18);
     img {
       width: 100%;
       height: 100%;
@@ -50,6 +53,10 @@ h1 {
     margin-left: 0.5em;
   }
 
+  &.remove {
+    position: relative;
+    z-index: -1;
+  }
 }
 
 .vine-glasses__container {
@@ -59,28 +66,30 @@ h1 {
 }
 
 #contact-page {
+  margin-bottom: 13.45rem;
+  margin-bottom: 7em;
 
-    article {
-        margin-top: 4.7rem;
-        margin-top: 2.5em;
-    }
+  article {
+    margin-top: 4.7rem;
+    margin-top: 2.5em;
+  }
 
-    .container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    h2 {
-        font-size: var.$font-size-h1;
-        font-weight: 900;
-        text-align: center;
-    }
+  h2 {
+    font-size: var.$font-size-h1;
+    font-weight: 900;
+    text-align: center;
+  }
 
-    p {
-        text-align: center;
-        font-size: var.$font-size-base;
-        max-width: 632px;
-        font-weight: 400;
-    }
+  p {
+    text-align: center;
+    font-size: var.$font-size-base;
+    max-width: 632px;
+    font-weight: 400;
+  }
 }

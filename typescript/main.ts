@@ -3,26 +3,27 @@ const inputs = document.querySelectorAll("input");
 const message = document.getElementById("message");
 const labels = document.querySelectorAll(".label");
 
-
 if (windowWidth <= 1056) {
-    const menuBtn = document.getElementById("menu-btn");
-    const headerMenu = document.getElementById("header-menu");
-    
-    menuBtn?.addEventListener("click", () => {
-        headerMenu?.classList.toggle("active");
-    });
+  const menuBtn = document.getElementById("menu-btn");
+  const headerMenu = document.getElementById("header-menu");
+  const mainTitle = document.querySelector("h1");
+
+  menuBtn?.addEventListener("click", () => {
+    headerMenu?.classList.toggle("active");
+    mainTitle?.classList.toggle("remove");
+  });
 }
 
-message?.addEventListener('focus', () => {
-    transformLabel("message", true);
-})
+message?.addEventListener("focus", () => {
+  transformLabel("message", true);
+});
 
-message?.addEventListener('blur', e => {
-    const target = e.target as HTMLTextAreaElement;
-    if (target.value.length === 0) {
-        transformLabel("message", false);
-    }
-})
+message?.addEventListener("blur", e => {
+  const target = e.target as HTMLTextAreaElement;
+  if (target.value.length === 0) {
+    transformLabel("message", false);
+  }
+});
 
 inputs?.forEach(input => {
   input.addEventListener("focus", e => {
@@ -38,7 +39,6 @@ inputs?.forEach(input => {
     }
   });
 });
-
 
 const transformLabel = (name: string, active: boolean) => {
   if (active) {

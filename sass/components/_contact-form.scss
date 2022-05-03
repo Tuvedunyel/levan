@@ -84,14 +84,52 @@
 
   .label {
     position: relative;
-    width: 100%;
     text-align: left;
+    align-self: start;
     z-index: 1;
     transform: translate(17px, 45px);
     transition: all 0.5s ease-in-out;
 
     &.active {
       transform: translate(17px, 0) !important;
+    }
+  }
+
+  .sender {
+    align-self: end;
+    background: none;
+    border: none;
+    font-weight: 900;
+    font-size: var.$font-size-h1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    border-bottom: 1px solid var.$black_700;
+    padding-bottom: 0.3em;
+
+    &::after {
+      content: "+";
+      font-size: var.$font-size-h1;
+      color: var.$black_700;
+      margin-left: 1em;
+    }
+
+    .wpcf7-spinner {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin-block: auto;
+    }
+
+    #send {
+      width: fit-content;
+      width: -moz-fit-content;
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
     }
   }
 }

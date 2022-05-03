@@ -71,7 +71,7 @@
       height: 6px;
       border-radius: 5px;
       background: var.$white_700;
-      transition: all 1s ease-in-out
+      transition: all 1s ease-in-out;
     }
 
     &::before {
@@ -115,17 +115,16 @@
     }
 
     .menu-btn {
-        &__burger {
-            transform: translateX(-28px);
-        }
+      &__burger {
+        transform: translateX(-28px);
+      }
 
-        &::before {
-            transform: rotate(405deg);
-        }
-        &::after {
-            transform: rotate(-405deg);
-        }
+      &::before {
+        transform: rotate(405deg);
+      }
+      &::after {
+        transform: rotate(-405deg);
+      }
     }
   }
 }
-

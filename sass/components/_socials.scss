@@ -6,6 +6,10 @@
   top: 45%;
   z-index: 100;
 
+  @include var.breakpoint(1056px) {
+    position: absolute;
+  }
+
   a {
     display: flow-root;
     margin-bottom: 0.3em;
@@ -23,5 +27,13 @@
     width: 85px;
     height: 58px;
     right: -31%;
+
+    @include var.breakpoint(1056px) {
+      right: -14%;
+    }
+
+    @include var.breakpoint(457px) {
+      right: -4%;
+    }
   }
 }
