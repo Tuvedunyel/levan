@@ -1,22 +1,152 @@
-@use '../abstracts' as var;
+@use "../abstracts" as var;
 
 .main-page.box .box-article {
-   background: none !important;
-   padding: 0;
-   margin: 0;
+  background: none !important;
+  padding: 0;
+  margin: 0;
 
-   .container {
-	flex-direction: column;
-	background: url('../img/tache-vin.jpg');
-	background-position: right;
-	background-repeat: no-repeat;
-	align-items: flex-start;
-	max-width: 76%;
-   }
-   .article-container {
-	padding-top: 2.5em;
-	padding-bottom: 6.2em;
-	width: 50%;
-	color: var.$black_700;
-   }
+  @include var.breakpoint(879px) {
+	  background: url('../img/tache-vin.jpg') !important;
+	  background-position: top center !important;
+	  background-size: contain !important;
+	  background-repeat: no-repeat !important;
+  }
+
+  .container {
+    flex-direction: column;
+    background: url("../img/tache-vin.jpg");
+    background-position: top right;
+	background-size: 850px 493px;
+    background-repeat: no-repeat;
+    align-items: flex-start;
+    max-width: 76%;
+
+	@include var.breakpoint(1668px) {
+		max-width: 87%
+	}
+
+	@include var.breakpoint(879px) {
+		background: none;
+	}
+  }
+  .article-container {
+    padding-top: 2.5em;
+    padding-bottom: 6.2em;
+    width: 50%;
+    color: var.$black_700;
+
+	@include var.breakpoint(1307px) {
+	  width: 100%;
+	  background: rgba($color: white, $alpha: 0.2);
+	  padding-top: 7.2em;
+	}
+
+	@include var.breakpoint(1041px) {
+		padding-top: 5em;
+	}
+  }
+
+  a {
+	  background: none;
+	  color: var.$black_700;
+	  text-decoration: none;
+	  border: none;
+	  border-radius: 0;
+	  font-size: 3.1rem;
+	  font-weight: 900;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  padding: 0;
+	  border-bottom: 1px solid var.$black_700;
+	  padding-bottom: 0.6em;
+	  margin-top: 1em;
+	  width: fit-content;
+	  width: -moz-fit-content;
+	  &::after {
+		  content: '+';
+		  margin-left: 1em;
+	  }
+  }
+}
+
+.selection {
+	background: var.$black_500;
+	color: var.$white_700;
+	padding-top: 5.5em;
+	padding-bottom: 7.35rem;
+	padding-bottom: 3.5em;
+	
+	.container {
+		flex-direction: column;
+		
+	}
+
+	a {
+		font-size: 3.1rem;
+		font-weight: 900;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-bottom: 1px solid var.$white_700;
+		padding-bottom: 0.5em;
+		color: var.$white_700;
+		text-decoration: none;
+		margin-top: 4em;
+	
+		&::after {
+			content: '+';
+			margin-left: 1em;
+		}
+	}
+}
+
+.selection-boissons {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 7.5em;
+	row-gap: 4em;
+
+	.selection-boissons__descriptif {
+		margin-top: 3em;
+	}
+
+
+	li {
+		display: flex;
+		justify-content: start;
+		align-items: start;
+		gap: 1em;
+
+		img {
+			min-width: 190px;
+			width: 190px;
+		}
+	}
+
+	h3 {
+		font-size: 2.6rem;
+		margin-bottom: 0.2em;
+		font-weight: 900;
+
+		& em {
+			font-weight: 700;
+			font-style: italic;
+			margin-bottom: 0.2em;
+		}
+	}
+
+	h4 {
+		font-size: 2rem;
+		font-weight: 700;
+	}
+
+	p {
+		font-size: 2rem;
+
+		&:not(:last-of-type) {
+			margin-bottom: 1em;
+		}
+	}
+
 }

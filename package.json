@@ -1,14 +1,14 @@
 {
-  "name": "levan-theme",
+  "name": "levan",
   "version": "1.0.0",
-  "description": "Theme de l'entreprise Levan",
+  "description": "WordPress theme for the Levan",
   "scripts": {
-    "sass": "sass --no-source-map --watch sass:css --style compressed",
-    "typescript": "npx tsc --watch"
+    "sass": "sass --watch sass:css --style compressed",
+    "typescript": "tsc --watch"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
   "devDependencies": {
     "sass": "^1.51.0",
     "typescript": "^4.6.4"
