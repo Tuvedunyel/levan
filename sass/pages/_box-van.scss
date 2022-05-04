@@ -107,8 +107,17 @@
 	column-gap: 7.5em;
 	row-gap: 4em;
 
+	@include var.breakpoint(1153px) {
+		grid-template-columns: 1fr;
+		column-gap: 0;
+	}
+
+
 	.selection-boissons__descriptif {
 		margin-top: 3em;
+		@include var.breakpoint(1056px) {
+			margin-top: 0;
+		}
 	}
 
 
@@ -117,6 +126,12 @@
 		justify-content: start;
 		align-items: start;
 		gap: 1em;
+
+		@include var.breakpoint(1056px) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
 
 		img {
 			min-width: 190px;

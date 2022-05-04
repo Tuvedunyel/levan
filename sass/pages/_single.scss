@@ -1,0 +1,28 @@
+.single {
+
+    .title__singe__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em;
+        padding-bottom: 9em;
+
+        background: url('../img/tache-vin.jpg');
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: 387px;
+
+        h1 {
+            text-align: center;
+        }
+    }
+
+    .hero-banner {
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
