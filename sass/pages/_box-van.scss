@@ -1,0 +1,22 @@
+@use '../abstracts' as var;
+
+.main-page.box .box-article {
+   background: none !important;
+   padding: 0;
+   margin: 0;
+
+   .container {
+	flex-direction: column;
+	background: url('../img/tache-vin.jpg');
+	background-position: right;
+	background-repeat: no-repeat;
+	align-items: flex-start;
+	max-width: 76%;
+   }
+   .article-container {
+	padding-top: 2.5em;
+	padding-bottom: 6.2em;
+	width: 50%;
+	color: var.$black_700;
+   }
+}
