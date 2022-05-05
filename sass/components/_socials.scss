@@ -32,6 +32,14 @@
       right: -14%;
     }
 
+    @include var.breakpoint(930px) {
+	right: -10%;
+    }
+
+    @include var.breakpoint(602px) {
+	right: -8%;
+    }
+
     @include var.breakpoint(457px) {
       right: -4%;
     }
