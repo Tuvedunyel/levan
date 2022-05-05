@@ -13,7 +13,7 @@ get_template_part('layouts/part-home');
         <img src='<?= esc_url($image['url']) ?>' alt='<?= esc_attr($image['alt']) ?>' />
     </div>
     <?php $args = array(
-        'post_type' => 'post',
+        'post_type' => 'particulier',
         'posts_per_page' => 3
     );
     $post_query = new WP_Query($args);

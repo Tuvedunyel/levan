@@ -1,0 +1,133 @@
+@use '../abstracts' as var;
+
+
+.header-front {
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.nav-front-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueil-banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 1070px;
+
+    &__red-bg {
+        background: var.$red_500;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+
+        strong {
+            position: absolute;
+            font-size: 2rem;
+            font-weight: 400;
+            color: white;
+            width: fit-content;
+            width: -moz-fit-content;
+            height: fit-content;
+            height: -moz-fit-content;
+
+            &::before, &::after {
+                content: '/';
+            }
+
+            &::before {
+                margin-left: 0.3em;
+            }
+
+            &::after {
+                margin-right: 0.3em;
+            }
+
+            &:first-of-type {
+                top: 2%;
+                right: 0;
+                left: 0;
+                margin-inline: auto;
+            }
+
+            &:nth-of-type(2) {
+                top: 0;
+                bottom: 0;
+                right: 0;
+                margin-block: auto;
+                transform: rotate(-90deg);
+            }
+            
+            &:nth-of-type(3) {
+                bottom: 2%;
+                right: 0;
+                left: 0;
+                margin-inline: auto;
+            }
+
+            &:nth-of-type(4) {
+                bottom: 0;
+                top: 0;
+                left: -4%;
+                margin-block: auto;
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+
+    img:last-of-type {
+        margin-bottom: 7em;
+        margin-top: 4.5em;
+    }
+}
+
+.accueil-banner__right-site {
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    .hero-accueil-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        margin: 0 !important;
+        z-index:-1;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .phone {
+        grid-row: 1;
+        grid-column: 3;
+    }
+
+    h1 {
+        display: flow-root;
+        background: #171C20;
+        font-size: 3rem;
+        grid-column: 1;
+        grid-row: 2;
+        font-weight: 400;
+        height: fit-content;
+        height: -moz-fit-content;
+        align-self: center;
+        justify-self: center;
+
+        &::after, &::before {
+            content: unset;
+        }
+    }
+}

@@ -1,3 +1,3 @@
-<?php get_header(); ?>
+<?php get_header('front'); ?>
 
 <?php get_footer(); ?>
