@@ -1,0 +1,91 @@
+@use "../abstracts" as var;
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+  justify-content: start;
+
+  @include var.breakpoint(1028px) {
+	grid-template-columns: 1fr;
+  }
+}
+
+.home-template .hero-banner img {
+    height: 100%;
+
+    @include var.breakpoint(1028px) {
+	width: 100%;
+    }
+}
+
+.home-template .hero-banner {
+    height: 634px;
+    align-items: start;
+
+    @include var.breakpoint(858px) {
+	height: auto;
+    }
+}
+
+.red-bg {
+  background: var.$red_500;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.2em;
+  padding-bottom: 2em;
+
+  h1 {
+    font-size: 2.1rem;
+    color: var.$white_700;
+    text-align: center;
+    background: none;
+    margin-bottom: 2em;
+
+    &::after,
+    &::before {
+      content: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  article {
+    color: white;
+    margin-inline: auto;
+    max-width: 75%;
+
+    img {
+	margin-bottom: 3em;
+    }
+
+    p {
+      font-size: 1.9rem;
+      text-align: center;
+    }
+
+    ol {
+      margin-top: 1.7em;
+      font-weight: 900;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.post-loop {
+    margin-top: 2.3em;
+    margin-left: 3em;
+    max-width: 75%;
+
+    @include var.breakpoint(400px) {
+	margin-left: unset;
+	margin-inline: auto;
+    }
+}
