@@ -11,6 +11,10 @@ if (windowWidth <= 1056) {
   menuBtn?.addEventListener("click", () => {
     headerMenu?.classList.toggle("active");
     mainTitle?.classList.toggle("remove");
+
+    if ( headerMenu?.classList.contains('active') ) {
+	window.scrollTo(0, 0);
+    } 
   });
 }
 
