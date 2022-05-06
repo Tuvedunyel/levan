@@ -55,35 +55,35 @@
             </nav>
         </div>
     </header>
+    <main class="front-page">
+        <section class='socials-header'>
+            <?php if (have_rows('socials', 'options')) : ?>
+                <div class='socials-container'>
+                    <?php while (have_rows('socials', 'options')) : the_row(); ?>
+                        <?php $socials_image = get_sub_field('image');
+                        $socials_image_url = $socials_image['url'];
+                        $socials_image_alt = $socials_image['alt'];
 
-    <section class='socials-header'>
-        <?php if (have_rows('socials', 'options')) : ?>
-            <div class='socials-container'>
-                <?php while (have_rows('socials', 'options')) : the_row(); ?>
-                    <?php $socials_image = get_sub_field('image');
-                    $socials_image_url = $socials_image['url'];
-                    $socials_image_alt = $socials_image['alt'];
-
-                    $socials_link = get_sub_field('lien');
-                    $socials_link_url = $socials_link['url'];
-                    $socials_link_title = $socials_link['title'];
-                    $socials_link_target = $socials_link['target'] ? $socials_link['target'] : '_self';
-                    ?>
-                    <a href='<?= esc_url($socials_link_url); ?>' title='<?= esc_html($socials_link_title); ?>' target='<?= esc_attr($socials_link_target) ?>'>
-                        <span class='screen-reader-text'><?= esc_html($socials_link_title); ?></span>
-                        <img src="<?= esc_url($socials_image_url) ?>" alt='<?= esc_attr($socials_image_alt); ?>' />
+                        $socials_link = get_sub_field('lien');
+                        $socials_link_url = $socials_link['url'];
+                        $socials_link_title = $socials_link['title'];
+                        $socials_link_target = $socials_link['target'] ? $socials_link['target'] : '_self';
+                        ?>
+                        <a href='<?= esc_url($socials_link_url); ?>' title='<?= esc_html($socials_link_title); ?>' target='<?= esc_attr($socials_link_target) ?>'>
+                            <span class='screen-reader-text'><?= esc_html($socials_link_title); ?></span>
+                            <img src="<?= esc_url($socials_image_url) ?>" alt='<?= esc_attr($socials_image_alt); ?>' />
+                        </a>
+                    <?php endwhile; ?>
+                </div>
+                <div class='contact-header'>
+                    <a href="<?php the_field('lien_page_contact', 'options') ?>">
+                        <?php $image_contact = get_field('image_contact', 'options');
+                        $image_contact_url = $image_contact['url'];
+                        $image_contact_alt = $image_contact['alt'];
+                        ?>
+                        <span class='screen-reader-text'><?= esc_attr($image_contact_alt); ?></span>
+                        <img src='<?= esc_url($image_contact_url); ?>' alt='<?= esc_attr($image_contact_alt); ?>' />
                     </a>
-                <?php endwhile; ?>
-            </div>
-            <div class='contact-header'>
-                <a href="<?php the_field('lien_page_contact', 'options') ?>">
-                    <?php $image_contact = get_field('image_contact', 'options');
-                    $image_contact_url = $image_contact['url'];
-                    $image_contact_alt = $image_contact['alt'];
-                    ?>
-                    <span class='screen-reader-text'><?= esc_attr($image_contact_alt); ?></span>
-                    <img src='<?= esc_url($image_contact_url); ?>' alt='<?= esc_attr($image_contact_alt); ?>' />
-                </a>
-            </div>
-        <?php endif; ?>
-    </section>
+                </div>
+            <?php endif; ?>
+        </section>

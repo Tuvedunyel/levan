@@ -3,15 +3,83 @@ const windowWidth = window.innerWidth;
 const inputs = document.querySelectorAll("input");
 const message = document.getElementById("message");
 const labels = document.querySelectorAll(".label");
-if (windowWidth <= 1056) {
+if (windowWidth <= 1056 && windowWidth > 778) {
     const menuBtn = document.getElementById("menu-btn");
     const headerMenu = document.getElementById("header-menu");
     const mainTitle = document.querySelector("h1");
     menuBtn?.addEventListener("click", () => {
         headerMenu?.classList.toggle("active");
         mainTitle?.classList.toggle("remove");
-        if (headerMenu?.classList.contains('active')) {
+        if (headerMenu?.classList.contains("active")) {
             window.scrollTo(0, 0);
+            menuBtn.style.transform = 'translateY(-106rem)';
+            setTimeout(() => {
+                document.body.style.overflow = "hidden";
+            }, 500);
+        }
+        else {
+            document.body.style.overflow = "visible";
+            menuBtn.style.transform = 'translateY(0)';
+        }
+    });
+}
+else if (windowWidth <= 778 && windowWidth > 469) {
+    const menuBtn = document.getElementById("menu-btn");
+    const headerMenu = document.getElementById("header-menu");
+    const mainTitle = document.querySelector("h1");
+    menuBtn?.addEventListener("click", () => {
+        headerMenu?.classList.toggle("active");
+        mainTitle?.classList.toggle("remove");
+        if (headerMenu?.classList.contains("active")) {
+            window.scrollTo(0, 0);
+            menuBtn.style.transform = 'translateY(-119rem)';
+            setTimeout(() => {
+                document.body.style.overflow = "hidden";
+            }, 500);
+        }
+        else {
+            document.body.style.overflow = "visible";
+            menuBtn.style.transform = 'translateY(0)';
+        }
+    });
+}
+else if (windowWidth <= 469 && windowWidth > 388) {
+    const menuBtn = document.getElementById("menu-btn");
+    const headerMenu = document.getElementById("header-menu");
+    const mainTitle = document.querySelector("h1");
+    menuBtn?.addEventListener("click", () => {
+        headerMenu?.classList.toggle("active");
+        mainTitle?.classList.toggle("remove");
+        if (headerMenu?.classList.contains("active")) {
+            window.scrollTo(0, 0);
+            menuBtn.style.transform = 'translateY(-136rem)';
+            setTimeout(() => {
+                document.body.style.overflow = "hidden";
+            }, 500);
+        }
+        else {
+            document.body.style.overflow = "visible";
+            menuBtn.style.transform = 'translateY(0)';
+        }
+    });
+}
+else if (windowWidth <= 388) {
+    const menuBtn = document.getElementById("menu-btn");
+    const headerMenu = document.getElementById("header-menu");
+    const mainTitle = document.querySelector("h1");
+    menuBtn?.addEventListener("click", () => {
+        headerMenu?.classList.toggle("active");
+        mainTitle?.classList.toggle("remove");
+        if (headerMenu?.classList.contains("active")) {
+            window.scrollTo(0, 0);
+            menuBtn.style.transform = 'translateY(-167rem)';
+            setTimeout(() => {
+                document.body.style.overflow = "hidden";
+            }, 500);
+        }
+        else {
+            document.body.style.overflow = "visible";
+            menuBtn.style.transform = 'translateY(0)';
         }
     });
 }
