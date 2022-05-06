@@ -72,7 +72,7 @@ else if (windowWidth <= 388) {
         mainTitle?.classList.toggle("remove");
         if (headerMenu?.classList.contains("active")) {
             window.scrollTo(0, 0);
-            menuBtn.style.transform = 'translateY(-167rem)';
+            menuBtn.style.transform = 'translateY(-148rem)';
             setTimeout(() => {
                 document.body.style.overflow = "hidden";
             }, 500);
