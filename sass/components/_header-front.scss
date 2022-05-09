@@ -5,9 +5,8 @@
   margin-top: 0;
   margin-left: 0;
 
-
   @include var.breakpoint(1056px) {
-	display: flex;
+    display: flex;
   }
 
   @include var.breakpoint(469px) {
@@ -18,21 +17,21 @@
 }
 
 .nav-front-container {
-  display: flex;
-  justify-content: start;
+  display: grid;
+  grid-template-columns: 0.05fr 0.95fr;
   align-items: center;
-  gap: 6em;
+  justify-items: center;
   width: 90%;
   padding-block: 0.5em;
 
   @include var.breakpoint(1056px) {
-	justify-content: space-between;
-	gap: 0;
-	width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 
-	 a img {
-	    margin-left: 1em;
-	}
+    a img {
+      margin-left: 1em;
+    }
   }
 }
 
@@ -58,7 +57,7 @@
     align-items: center;
 
     @include var.breakpoint(388px) {
-        padding-block: 4em;
+      padding-block: 4em;
     }
 
     strong {
@@ -118,7 +117,7 @@
         transform: rotate(90deg);
 
         @include var.breakpoint(548px) {
-            left: -12%;
+          left: -12%;
         }
 
         @include var.breakpoint(401px) {
@@ -148,11 +147,11 @@
   grid-template-rows: repeat(3, 1fr);
 
   @include var.breakpoint(1454px) {
-	grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @include var.breakpoint(970px) {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .hero-accueil-image {
@@ -178,10 +177,10 @@
     margin-top: 2em;
 
     @include var.breakpoint(1454px) {
-	grid-column: 2;
+      grid-column: 2;
     }
     @include var.breakpoint(970px) {
-        grid-column: 1;
+      grid-column: 1;
     }
   }
 
@@ -204,4 +203,8 @@
   }
 }
 
-
+.illustration {
+  max-width: 375px;
+  width: 90%;
+  margin-inline: auto;
+}

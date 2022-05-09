@@ -118,6 +118,13 @@
       color: var.$red_500;
     border-bottom-color: var.$red_500;
   }
+
+  @include var.breakpoint(626px) {
+        justify-content: center;
+      &::after {
+          content: none;
+      }
+  }
 }
 
 .pro-front {
@@ -230,6 +237,12 @@
         &::after {
             content: '+';
             margin-left: 0.9em;
+        }
+
+        @include var.breakpoint(403px) {
+            &::after {
+                content: none
+            }
         }
     }
 

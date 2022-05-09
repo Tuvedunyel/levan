@@ -22,7 +22,7 @@
                 <?php $white_logo = get_field('logo_blanc'); ?>
                 <img src="<?= esc_url($white_logo['url']); ?>" alt="<?= esc_attr($white_logo['alt']); ?>" class='logo-blanc'>
                 <?php $illustration = get_field('illustration'); ?>
-                <img src="<?= esc_url($illustration['url']); ?>" alt="<?= esc_attr($illustration['alt']); ?>">
+                <img src="<?= esc_url($illustration['url']); ?>" alt="<?= esc_attr($illustration['alt']); ?>" class="illustration">
             </div>
             <div class="accueil-banner__right-site">
                 <strong class="phone">
