@@ -170,3 +170,11 @@ body {
   @include var.font-modifier(var.$font-base, var.$font-size-base, normal, 300);
   line-height: 1.5;
 }
+
+picture {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}

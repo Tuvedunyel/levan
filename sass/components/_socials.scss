@@ -2,7 +2,7 @@
 
 .socials-header {
   position: fixed;
-  right: 0.8%;
+  right: 0;
   top: 45%;
   z-index: 100;
 
@@ -10,9 +10,30 @@
     position: absolute;
   }
 
-  a {
-    display: flow-root;
-    margin-bottom: 0.3em;
+  a:not(:last-of-type) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.9em;
+    border-radius: 100%;
+    background: var.$white_700;
+    padding: 0.4em;
+    margin-right: 0.8em;
+
+  }
+
+  .contact-socials__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: white;
+    height: 65.4px;
+    background: white;
+    padding: 0.4em;
+    padding-right: 0.8em;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
   }
 
   .socials-container {
@@ -20,28 +41,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  .contact-header {
-    position: absolute;
-    width: 85px;
-    height: 58px;
-    right: -31%;
-
-    @include var.breakpoint(1056px) {
-      right: -14%;
-    }
-
-    @include var.breakpoint(930px) {
-	right: -10%;
-    }
-
-    @include var.breakpoint(602px) {
-	right: -8%;
-    }
-
-    @include var.breakpoint(457px) {
-      right: -4%;
-    }
   }
 }

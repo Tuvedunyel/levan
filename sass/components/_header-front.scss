@@ -38,7 +38,6 @@
 .accueil-banner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 1070px;
 
   @include var.breakpoint(784px) {
     grid-template-columns: 1fr;
@@ -55,6 +54,10 @@
     flex-direction: column;
     justify-content: end;
     align-items: center;
+
+    picture {
+      width: auto;
+    }
 
     @include var.breakpoint(388px) {
       padding-block: 4em;

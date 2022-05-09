@@ -50,14 +50,12 @@
                     $socials_link_title = $socials_link['title'];
                     $socials_link_target = $socials_link['target'] ? $socials_link['target'] : '_self';
                     ?>
-                    <a href='<?= esc_url($socials_link_url); ?>' title='<?= esc_html($socials_link_title); ?>' target='<?= esc_attr($socials_link_target) ?>'>
+                    <a hrief='<?= esc_url($socials_link_url); ?>' title='<?= esc_html($socials_link_title); ?>' target='<?= esc_attr($socials_link_target) ?>'>
                         <span class='screen-reader-text'><?= esc_html($socials_link_title); ?></span>
                         <img src="<?= esc_url($socials_image_url) ?>" alt='<?= esc_attr($socials_image_alt); ?>' />
                     </a>
                 <?php endwhile; ?>
-            </div>
-            <div class='contact-header'>
-                <a href="<?php the_field('lien_page_contact', 'options') ?>">
+                <a href="<?php the_field('lien_page_contact', 'options') ?>" class='contact-socials__header'>
                     <?php $image_contact = get_field('image_contact', 'options');
                     $image_contact_url = $image_contact['url'];
                     $image_contact_alt = $image_contact['alt'];
