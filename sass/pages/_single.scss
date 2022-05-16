@@ -25,38 +25,38 @@
 
     .container {
       display: flex;
-      justify-content: center;
+      justify-content: end;
       align-items: center;
       position: relative;
-
+      width: 100%;
       @include var.breakpoint(1161px) {
-	flex-direction: column; 
+        flex-direction: column;
       }
     }
   }
 
   .image-container {
     position: absolute;
-    left: -10%;
+    left: -0.8%;
     top: -24%;
     border: 1px solid var.$white_700;
     padding: 0.6em;
 
     @include var.breakpoint(1701px) {
-	max-width: 40%;
+      max-width: 40%;
     }
 
     @include var.breakpoint(1447px) {
-	top: -10%;
+      top: -10%;
     }
 
     @include var.breakpoint(1265px) {
-	max-width: 47%;
+      max-width: 47%;
     }
 
     @include var.breakpoint(1161px) {
-	position: initial;
-	max-width: 100%;
+      position: initial;
+      max-width: 100%;
     }
   }
 
@@ -78,8 +78,8 @@
     padding-block: 2.8em;
 
     @include var.breakpoint(1161px) {
-	align-items: center;
-	padding-right: 0;
+      align-items: center;
+      padding-right: 0;
     }
 
     img {
@@ -96,7 +96,7 @@
   max-width: 54%;
 
   @include var.breakpoint(791px) {
-	max-width: 90%;
+    max-width: 90%;
   }
 }
 
@@ -120,8 +120,8 @@
   margin-bottom: 2.2em;
 
   @include var.breakpoint(1161px) {
-	padding-right: 0;
-	text-align: center;
+    padding-right: 0;
+    text-align: center;
   }
 }
 
@@ -145,10 +145,10 @@
     margin-bottom: 16.7em;
 
     @include var.breakpoint(1327px) {
-	flex-direction: column;	
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 1.7em;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1.7em;
     }
   }
 
@@ -158,8 +158,8 @@
     z-index: 0;
 
     @include var.breakpoint(1327px) {
-	width: fit-content;
-	width: -moz-fit-content;
+      width: fit-content;
+      width: -moz-fit-content;
     }
   }
 
@@ -170,18 +170,18 @@
     right: 17%;
 
     @include var.breakpoint(1719px) {
-	right: 8%;
+      right: 8%;
     }
 
     @include var.breakpoint(1509px) {
-	right: -2%;
+      right: -2%;
     }
 
     @include var.breakpoint(1327px) {
-	position: initial;
-	right: unset;
-	bottom: unset;
-	margin-left: 0 !important;
+      position: initial;
+      right: unset;
+      bottom: unset;
+      margin-left: 0 !important;
     }
   }
 
@@ -192,8 +192,8 @@
     margin-bottom: 0.8em;
 
     @include var.breakpoint(1327px) {
-	text-align: center;
-	grid-column: 1 / 3;
+      text-align: center;
+      grid-column: 1 / 3;
     }
   }
 
@@ -202,13 +202,17 @@
     font-weight: 400;
 
     @include var.breakpoint(1327px) {
-	grid-column: 1 /3;
+      grid-column: 1 /3;
     }
 
     &:not(:last-of-type) {
       margin-bottom: 1.5em;
     }
   }
+}
+
+.single .post-loop {
+  max-width: 100% !important;
 }
 
 .post-loop {
@@ -218,6 +222,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
   h3 {
     font-size: 2.3rem;
     font-weight: 700;
@@ -225,7 +230,7 @@
     grid-column: 2;
 
     @include var.breakpoint(1327px) {
-	grid-column: 1 / 3;
+      grid-column: 1 / 3;
     }
   }
 
@@ -242,7 +247,7 @@
     color: var.$black_700;
 
     @include var.breakpoint(1327px) {
-	grid-column: 1 / 3;
+      grid-column: 1 / 3;
     }
 
     &:hover {
@@ -263,7 +268,7 @@
       margin-left: 7.5em;
 
       @include var.breakpoint(724px) {
-	margin-left: 0;
+        margin-left: 0;
       }
     }
   }

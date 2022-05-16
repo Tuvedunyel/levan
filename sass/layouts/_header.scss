@@ -7,8 +7,10 @@ header {
   margin-left: 3em;
   margin-top: 0.6em;
   margin-bottom: 0.6em;
+  position: relative;
+    z-index: 99;
 
-  @include var.breakpoint(1056px) {
+  @include var.breakpoint(1056px){
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
@@ -28,6 +30,10 @@ header {
   .background {
     display: none;
   }
+}
+
+.logo__header img {
+  max-width: 100px;
 }
 
 #menu-main-menu {
@@ -107,8 +113,7 @@ header {
   }
 
   @include var.breakpoint(1056px) {
-    grid-column: 2;
-    border-radius: 50px;
+    display: none;
   }
 
   @include var.breakpoint(710px) {

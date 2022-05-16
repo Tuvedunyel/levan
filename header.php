@@ -17,7 +17,7 @@
         $image_url = $image['url'];
         $image_alt = $image['alt'];
         ?>
-        <a href='/'>
+        <a href='/' class="logo__header">
             <img src='<?= esc_url($image_url) ?>' alt='<?= esc_attr($image_alt); ?>' />
         </a>
         <nav id="header-menu">
@@ -50,7 +50,7 @@
                     $socials_link_title = $socials_link['title'];
                     $socials_link_target = $socials_link['target'] ? $socials_link['target'] : '_self';
                     ?>
-                    <a hrief='<?= esc_url($socials_link_url); ?>' title='<?= esc_html($socials_link_title); ?>' target='<?= esc_attr($socials_link_target) ?>'>
+                    <a href='<?= esc_url($socials_link_url); ?>' title='<?= esc_html($socials_link_title); ?>' target='<?= esc_attr($socials_link_target) ?>'>
                         <span class='screen-reader-text'><?= esc_html($socials_link_title); ?></span>
                         <img src="<?= esc_url($socials_image_url) ?>" alt='<?= esc_attr($socials_image_alt); ?>' />
                     </a>

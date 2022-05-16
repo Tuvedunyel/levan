@@ -91,6 +91,10 @@
 }
 
 .post-contenu {
+
+  picture {
+    width: auto;
+  }
   img {
     width: 100%;
     transform: translateY(-8rem);
@@ -131,6 +135,15 @@
 
 .carte-visite {
   margin-bottom: 7.3em;
+
+  .container {
+    justify-content: center;
+    align-items: center;
+
+    picture {
+      width: auto;
+    }
+  }
   img {
     margin-inline: auto;
   }

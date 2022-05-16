@@ -6,10 +6,6 @@
   top: 45%;
   z-index: 100;
 
-  @include var.breakpoint(1056px) {
-    position: absolute;
-  }
-
   a:not(:last-of-type) {
     display: flex;
     justify-content: center;

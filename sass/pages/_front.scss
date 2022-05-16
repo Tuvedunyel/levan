@@ -104,7 +104,7 @@
   text-decoration: none;
   border-bottom: 1px solid var.$black_700;
   padding-bottom: 0.4em;
-  text-align: left;
+  text-align: left !important;
   
   &::after {
       content: "+";
@@ -119,12 +119,6 @@
     border-bottom-color: var.$red_500;
   }
 
-  @include var.breakpoint(626px) {
-        justify-content: center;
-      &::after {
-          content: none;
-      }
-  }
 }
 
 .pro-front {
@@ -333,6 +327,10 @@
     justify-items: center;
     align-items: center;
     gap: 2em;
+
+  picture img {
+    width: auto;
+  }
 
     @include var.breakpoint(1482px) {
         grid-template-columns: 1fr;

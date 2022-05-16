@@ -2,17 +2,16 @@
 const windowWidth = window.innerWidth;
 const inputs = document.querySelectorAll("input");
 const message = document.getElementById("message");
-const labels = document.querySelectorAll(".label");
-if (windowWidth <= 1056 && windowWidth > 778) {
+if (windowWidth <= 1056) {
     const menuBtn = document.getElementById("menu-btn");
     const headerMenu = document.getElementById("header-menu");
     const mainTitle = document.querySelector("h1");
+    const phone = document.querySelector(".phone");
     menuBtn?.addEventListener("click", () => {
         headerMenu?.classList.toggle("active");
         mainTitle?.classList.toggle("remove");
         if (headerMenu?.classList.contains("active")) {
-            window.scrollTo(0, 0);
-            menuBtn.style.transform = 'translateY(-106rem)';
+            phone?.setAttribute("style", `display: flex; position: fixed; z-index: 50; top: 5%; right: 2%;`);
             setTimeout(() => {
                 document.body.style.overflow = "hidden";
             }, 500);
@@ -20,66 +19,7 @@ if (windowWidth <= 1056 && windowWidth > 778) {
         else {
             document.body.style.overflow = "visible";
             menuBtn.style.transform = 'translateY(0)';
-        }
-    });
-}
-else if (windowWidth <= 778 && windowWidth > 469) {
-    const menuBtn = document.getElementById("menu-btn");
-    const headerMenu = document.getElementById("header-menu");
-    const mainTitle = document.querySelector("h1");
-    menuBtn?.addEventListener("click", () => {
-        headerMenu?.classList.toggle("active");
-        mainTitle?.classList.toggle("remove");
-        if (headerMenu?.classList.contains("active")) {
-            window.scrollTo(0, 0);
-            menuBtn.style.transform = 'translateY(-119rem)';
-            setTimeout(() => {
-                document.body.style.overflow = "hidden";
-            }, 500);
-        }
-        else {
-            document.body.style.overflow = "visible";
-            menuBtn.style.transform = 'translateY(0)';
-        }
-    });
-}
-else if (windowWidth <= 469 && windowWidth > 388) {
-    const menuBtn = document.getElementById("menu-btn");
-    const headerMenu = document.getElementById("header-menu");
-    const mainTitle = document.querySelector("h1");
-    menuBtn?.addEventListener("click", () => {
-        headerMenu?.classList.toggle("active");
-        mainTitle?.classList.toggle("remove");
-        if (headerMenu?.classList.contains("active")) {
-            window.scrollTo(0, 0);
-            menuBtn.style.transform = 'translateY(-136rem)';
-            setTimeout(() => {
-                document.body.style.overflow = "hidden";
-            }, 500);
-        }
-        else {
-            document.body.style.overflow = "visible";
-            menuBtn.style.transform = 'translateY(0)';
-        }
-    });
-}
-else if (windowWidth <= 388) {
-    const menuBtn = document.getElementById("menu-btn");
-    const headerMenu = document.getElementById("header-menu");
-    const mainTitle = document.querySelector("h1");
-    menuBtn?.addEventListener("click", () => {
-        headerMenu?.classList.toggle("active");
-        mainTitle?.classList.toggle("remove");
-        if (headerMenu?.classList.contains("active")) {
-            window.scrollTo(0, 0);
-            menuBtn.style.transform = 'translateY(-148rem)';
-            setTimeout(() => {
-                document.body.style.overflow = "hidden";
-            }, 500);
-        }
-        else {
-            document.body.style.overflow = "visible";
-            menuBtn.style.transform = 'translateY(0)';
+            phone?.setAttribute("style", `display: none; position: initial; z-index: unset; top: unset; right: unset;`);
         }
     });
 }

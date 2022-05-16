@@ -6,18 +6,13 @@
   margin: 0;
 
   @include var.breakpoint(879px) {
-	  background: url('../img/tache-vin.jpg') !important;
-	  background-position: top center !important;
+	  background: url('../img/tache-vin.jpg') top center no-repeat !important;
 	  background-size: contain !important;
-	  background-repeat: no-repeat !important;
   }
 
   .container {
     flex-direction: column;
-    background: url("../img/tache-vin.jpg");
-    background-position: top right;
-	background-size: 850px 493px;
-    background-repeat: no-repeat;
+    background: url("../img/tache-vin.jpg") top right no-repeat;
     align-items: flex-start;
     max-width: 76%;
 

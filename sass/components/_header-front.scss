@@ -4,6 +4,8 @@
   flex-direction: column;
   margin-top: 0;
   margin-left: 0;
+  position: relative;
+  z-index: 99;
 
   @include var.breakpoint(1056px) {
     display: flex;
@@ -31,6 +33,7 @@
 
     a img {
       margin-left: 1em;
+      width: 75%;
     }
   }
 }
@@ -61,6 +64,11 @@
 
     @include var.breakpoint(388px) {
       padding-block: 4em;
+
+      img:first-of-type {
+        max-width: 80%;
+        margin-inline: auto;
+      }
     }
 
     strong {
@@ -174,7 +182,6 @@
     grid-row: 1;
     grid-column: 3;
     height: fit-content;
-    height: -moz-fit-content;
     align-self: start;
     justify-self: end;
     margin-top: 2em;
@@ -182,9 +189,13 @@
     @include var.breakpoint(1454px) {
       grid-column: 2;
     }
+    @include var.breakpoint(1056px) {
+      display: none;
+    }
     @include var.breakpoint(970px) {
       grid-column: 1;
     }
+
   }
 
   h1 {
@@ -192,12 +203,17 @@
     background: #171c20;
     font-size: 3rem;
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 3;
     font-weight: 400;
     height: fit-content;
     height: -moz-fit-content;
-    align-self: center;
+    align-self: end;
     justify-self: center;
+    max-width: 70%;
+
+    @include var.breakpoint(488px) {
+      max-width: 100%;
+    }
 
     &::after,
     &::before {
@@ -210,4 +226,12 @@
   max-width: 375px;
   width: 90%;
   margin-inline: auto;
+
+  @include var.breakpoint(474px) {
+    width: 70%;
+  }
+
+  @include var.breakpoint(369px) {
+    width: 90%;
+  }
 }
