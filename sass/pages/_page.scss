@@ -17,6 +17,11 @@
       width: 100%;
       height: 100%;
       z-index: -1;
+
+      @include var.breakpoint(1354px) {
+        object-fit: cover;
+        object-position: center;
+      }
     }
   }
 
@@ -37,18 +42,20 @@
     background: var.$black_500;
     color: white;
     padding-top: 4em;
-    padding-bottom: 14.9rem;
     padding-bottom: 7.8em;
 
     .container-narrow {
       max-width: 666px;
       margin-inline: auto;
+
+      @include var.breakpoint(600px) {
+        max-width: 95%;
+      }
     }
 
     h2 {
       font-size: 3.1rem;
       font-weight: 900;
-      margin-bottom: 3.1rem;
       margin-bottom: 1.1em;
     }
   }
@@ -135,6 +142,10 @@
 
 .carte-visite {
   margin-bottom: 7.3em;
+
+  @include var.breakpoint(550px) {
+    margin-bottom: 3.3em;
+  }
 
   .container {
     justify-content: center;
