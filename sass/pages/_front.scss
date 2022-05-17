@@ -342,6 +342,10 @@
             align-items: center;
             max-width: 95%;
             text-align: left !important;
+
+          picture {
+            width: fit-content;
+          }
         }
     }
 

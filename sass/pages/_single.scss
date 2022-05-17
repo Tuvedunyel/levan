@@ -213,6 +213,10 @@
 
 .single .post-loop {
   max-width: 100% !important;
+
+  @include var.breakpoint(816px) {
+    margin-left: 0;
+  }
 }
 
 .post-loop {
@@ -245,6 +249,7 @@
     justify-content: space-between;
     text-decoration: none;
     color: var.$black_700;
+    text-align: left;
 
     @include var.breakpoint(1327px) {
       grid-column: 1 / 3;

@@ -57,6 +57,7 @@
 	  margin-top: 1em;
 	  width: fit-content;
 	  width: -moz-fit-content;
+	  text-align: left;
 
 	  &:hover {
 		  color: var.$red_500;
@@ -74,7 +75,6 @@
 	background: var.$black_500;
 	color: var.$white_700;
 	padding-top: 5.5em;
-	padding-bottom: 7.35rem;
 	padding-bottom: 3.5em;
 	
 	.container {
@@ -93,6 +93,7 @@
 		color: var.$white_700;
 		text-decoration: none;
 		margin-top: 4em;
+		text-align: left;
 
 		&:hover {
 			color: var.$red_500;

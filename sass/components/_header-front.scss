@@ -1,6 +1,8 @@
 @use "../abstracts" as var;
 
 .header-front {
+  display: flex;
+  justify-content: space-between;
   flex-direction: column;
   margin-top: 0;
   margin-left: 0;
@@ -25,6 +27,7 @@
   justify-items: center;
   width: 90%;
   padding-block: 0.5em;
+  padding-bottom: 1.5em;
 
   @include var.breakpoint(1056px) {
     display: flex;
@@ -62,13 +65,33 @@
       width: auto;
     }
 
-    @include var.breakpoint(388px) {
-      padding-block: 4em;
+    @include var.breakpoint(770px) {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-items: center;
+      gap: 6em;
+    }
 
-      img:first-of-type {
-        max-width: 80%;
-        margin-inline: auto;
+    @include var.breakpoint(468px) {
+      grid-template-rows: 0.5fr 0.9fr;
+      padding-block: 4em;
+      gap: 4em;
+
+      picture {
+        max-width: 60%;
+
+        .logo-blanc {
+          width: 70%;
+          margin-inline: auto;
+        }
       }
+
+      //img:first-of-type {
+      //  max-width: 80%;
+      //  margin-inline: auto;
+      //}
     }
 
     strong {
@@ -136,18 +159,28 @@
         }
       }
     }
-  }
 
-  @include var.breakpoint(369px) {
-    &__red-bg picture {
-      max-width: 60%;
-    }
   }
 
   img:last-of-type {
     margin-bottom: 7em;
     margin-top: 4.5em;
+    @include var.breakpoint(770px) {
+      margin-top: 0;
+
+      &.logo-blanc {
+        margin-top: 4.2em;
+        margin-bottom: 0;
+      }
+    }
+
+    @include var.breakpoint(408px) {
+      &.logo-blanc {
+        margin-top: 0;
+      }
+    }
   }
+
 }
 
 .accueil-banner__right-site {
@@ -220,7 +253,7 @@
     }
 
     @include var.breakpoint(488px) {
-      max-width: 100%;
+      font-size: 2.5rem;
     }
 
     &::after,
