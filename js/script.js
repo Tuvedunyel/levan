@@ -2,11 +2,11 @@
 const windowWidth = window.innerWidth;
 const inputs = document.querySelectorAll("input");
 const message = document.getElementById("message");
+const phone = document.querySelector(".phone");
 if (windowWidth <= 1056) {
     const menuBtn = document.getElementById("menu-btn");
     const headerMenu = document.getElementById("header-menu");
     const mainTitle = document.querySelector("h1");
-    const phone = document.querySelector(".phone");
     menuBtn?.addEventListener("click", () => {
         headerMenu?.classList.toggle("active");
         mainTitle?.classList.toggle("remove");
@@ -22,6 +22,9 @@ if (windowWidth <= 1056) {
             phone?.setAttribute("style", `display: none; position: initial; z-index: unset; top: unset; right: unset;`);
         }
     });
+}
+else {
+    phone?.setAttribute('style', 'position: fixed; top: 6%; right: 0');
 }
 message?.addEventListener("focus", () => {
     transformLabel("message", true);

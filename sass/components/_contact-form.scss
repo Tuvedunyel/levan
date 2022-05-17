@@ -110,6 +110,10 @@
     border-bottom: 1px solid var.$black_700;
     padding-bottom: 0.3em;
 
+    @include var.breakpoint(718px) {
+      align-self: center;
+    }
+
     &::after {
       content: "+";
       font-size: var.$font-size-h1;

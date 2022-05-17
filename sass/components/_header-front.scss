@@ -203,13 +203,21 @@
     background: #171c20;
     font-size: 3rem;
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 2;
     font-weight: 400;
     height: fit-content;
-    height: -moz-fit-content;
     align-self: end;
     justify-self: center;
-    max-width: 70%;
+
+    @include var.breakpoint(970px) {
+      max-width: 70%;
+      justify-self: start;
+    }
+
+    @include var.breakpoint(784px) {
+      grid-row: 3;
+      justify-self: center;
+    }
 
     @include var.breakpoint(488px) {
       max-width: 100%;
